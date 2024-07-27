@@ -29,6 +29,7 @@ jobs:
         # Make sure username & password/token pair matches your registry credentials
         DOCKER_USERNAME: ${{ secrets.QUAY_USERNAME }}
         DOCKER_PASSWORD: ${{ secrets.QUAY_PASSWORD }}
+        REPO2DOCKER_EXTRA_ARGS: "--Repo2Docker.base_image=rocker/binder:4"
         DOCKER_REGISTRY: "quay.io"
         # Disable pushing a 'latest' tag, as this often just causes confusion
         LATEST_TAG_OFF: true
